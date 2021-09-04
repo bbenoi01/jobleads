@@ -1,0 +1,93 @@
+{
+  "name": "Job",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "apiId": {
+      "type": "string"
+    },
+    "salaryMin": {
+      "type": "string",
+      "default": "N/A"
+    },
+    "salaryMax": {
+      "type": "string",
+      "default": "N/A"
+    },
+    "companyName": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "datePosted": {
+      "type": "string"
+    },
+    "fullTime": {
+      "type": "boolean",
+      "required": true
+    },
+    "partTime": {
+      "type": "boolean",
+      "default": false
+    },
+    "contract": {
+      "type": "boolean",
+      "default": false
+    },
+    "sourceInfo": {
+      "type": "string",
+      "required": true
+    },
+    "sourceUrl": {
+      "type": "string"
+    },
+    "jobTitle": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "hidden": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "viewHistories": {
+      "type": "hasAndBelongsToMany",
+      "model": "ViewHistory",
+      "foreignKey": ""
+    },
+    "history": {
+      "type": "hasOne",
+      "model": "History"
+    },
+    "CandidateActivity": {
+      "type": "hasAndBelongsToMany",
+      "model": "CandidateActivity",
+      "foreignKey": ""
+    },
+    "applieds": {
+      "type": "hasAndBelongsToMany",
+      "model": "Applied",
+      "foreignKey": ""
+    },
+    "user": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,8 @@
+deployment:
+  prod:
+    branch: master
+    heroku:
+      appname: jobleads
+machine:
+  node:
+    version: 8.1.4

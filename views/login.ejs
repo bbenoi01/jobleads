@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">  
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <title> JobLeads </title>
+    </head>
+    <body>
+        <div class="navbar-fixed">
+            <nav class='white'>
+                <div class="nav-wrapper">
+                    <a href="/" class='brand-logo blue-text' style='padding-left:15px'>JobLeads</a>
+                </div>
+            </nav>
+        </div>     
+        <div class="section container valign-wrapper" id='login'>
+            <div class='row'>
+                <div class="col s12 offset-s7">
+                    <form action="/auth" method="POST">
+                        <div class="form-group input-field">
+                            <input type="email" class="form-control validate" id="email" name="email" data-error="Field can't be blank!" required>
+                            <label for="email">EMAIL</label>
+                        </div>
+                        <div class="form-group input-field">
+                            <input type="password" class="form-control validate" id="password" name="password" data-error="Field can't be blank!" required>
+                            <label for="password">PASSWORD</label>
+                        </div>
+                        <div>
+                            <button type="submit" id="submit" name="submit" class="btn blue waves-effect waves-light">Login</button>
+                        </div>
+                    </form>
+                    <br>  
+                    <a type="button" href="/auth/google" class="btn blue waves-effect waves-light">
+                        <span><i class="fa fa-google fa-2x"></i></span>
+                            Login with Google
+                    </a>
+                    <a type="button" href="/auth/github" class="btn blue waves-effect waves-light">
+                        <span><i class="fa fa-github fa-2x"></i></span>
+                            Login with GitHub
+                    </a> <br/>
+                    Need an account?<a href='/signup'> Sign up</a>
+                </div>
+            </div>    
+        </div>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script type='text/javascript' src="./init.js"></script>
+    </body>
+</html>

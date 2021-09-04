@@ -1,0 +1,72 @@
+{
+  "_meta": {
+    "sources": [
+      "../node_modules/loopback-component-passport/lib/models",
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "user": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "AccessToken": {
+    "dataSource": "MongoDB",
+    "public": false
+  },
+  "userCredential": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "userIdentity": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "ACL": {
+    "dataSource": "MongoDB",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "MongoDB",
+    "public": true,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "Job": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "EmployerActivity": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "ViewHistory": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "History": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "CandidateActivity": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "Applied": {
+    "dataSource": "MongoDB",
+    "public": true
+  }
+}

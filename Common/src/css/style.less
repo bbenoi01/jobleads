@@ -1,0 +1,91 @@
+#search-scroll-box, #addJob-scroll-box {
+    overflow-y: scroll;
+    height: 35vh
+}
+
+#activity-scroll-box {
+    overflow-y: scroll;
+    height: 50vh
+}
+
+html, body, #root, #root > div {
+    background-color: #eeeeee;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+#login {
+    height: 76vh
+}
+
+#signup {
+    height: 90vh
+}
+
+#action-card {
+    height: 15vh
+}
+
+#filter {
+    position: fixed;
+    width: 15vw
+}
+
+#hiddenNav {
+    color: #2196f3
+}
+
+#sidenav-overlay {
+    display: none
+}
+
+#empPosted {
+    position: fixed;
+    width: 33vw
+}
+
+#viewed, #fav, #applied, #allEmp, #postedJobs, #pendingStudents, #allStudents {
+    height: 75vh;
+    width: 33vw;
+    position: fixed;
+    overflow-y: scroll
+}
+
+.favorite {
+    color: grey;
+  }
+
+.favorite:hover {
+    color: red;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.favorite:visited {
+    color: red;
+}
+
+.applied {
+    color: grey;
+  }
+
+.applied:hover {
+    color: green;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.applied:visited {
+    color: green;
+}

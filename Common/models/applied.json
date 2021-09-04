@@ -1,0 +1,25 @@
+{
+  "name": "Applied",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "status_active": {
+      "type": "boolean",
+      "required": true
+    },
+    "job": {
+      "type": "object",
+      "required": true
+    },
+    "dateTime": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

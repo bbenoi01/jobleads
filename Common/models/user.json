@@ -1,0 +1,106 @@
+{
+  "name": "user",
+  "base": "User",
+  "plural": "users",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "hidden": ["password", "verificationToken"],
+  "properties": {
+    "full_name": {
+      "type": "string"
+    },
+    "jobtrackToken": {
+      "type": "string",
+      "default": ""
+    },
+    "candidate": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "employer": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "admin": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "approved": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "blocked": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "phoneNumber": {
+      "type": "number",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "job": {
+      "type": "hasMany",
+      "model": "Job",
+      "foreignKey": ""
+    },
+    "viewHistories": {
+      "type": "hasMany",
+      "model": "ViewHistory",
+      "foreignKey": ""
+    },
+    "history": {
+      "type": "hasMany",
+      "model": "History",
+      "foreignKey": ""
+    },
+    "CandidateActivity": {
+      "type": "hasMany",
+      "model": "CandidateActivity",
+      "foreignKey": ""
+    },
+    "applieds": {
+      "type": "hasMany",
+      "model": "Applied",
+      "foreignKey": ""
+    },
+    "EmployerActivity": {
+      "type": "hasMany",
+      "model": "EmployerActivity",
+      "foreignKey": ""
+    },
+    "accessTokens": {
+      "type": "hasMany",
+      "model": "AccessToken",
+      "foreignKey": "userId",
+      "options": {
+        "disableInclude": true
+      }
+    },
+    "identities": {
+      "type": "hasMany",
+      "model": "userIdentity",
+      "foreignKey": "userId"
+    },
+    "roles": {
+      "type": "hasOne",
+      "model": "Role",
+      "foreignKey": "userId"
+    },
+    "credentials": {
+      "type": "hasMany",
+      "model": "userCredential",
+      "foreignKey": "userId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
